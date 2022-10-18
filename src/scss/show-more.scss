@@ -1,0 +1,35 @@
+.show-more {
+    display: none;
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  @media (min-width: $tablet) {
+    .show-more {
+      display: block;
+      margin-bottom: 32px;
+    }
+  }
+
+  .show-more__text {
+    display: inline-block;
+    font-family: 'TT Lakes';
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 500;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 11px;
+      background-image: url(../img/check-down_icon.svg);
+      vertical-align: center;
+      margin: 0 13px 0 10px;
+      transition: all 0.2s ease;
+    }
+  }
+
+  .show-more__text--hide::before {
+    transform: rotate(180deg);
+  }

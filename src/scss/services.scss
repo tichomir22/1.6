@@ -1,0 +1,23 @@
+.services__tittle--padding {
+    padding: 25px 0 0 16px;
+  }
+
+  .services__container {
+    display: block;
+    margin: 0 auto;
+    max-width: 1056px;
+    padding: 0 16px;
+  }
+
+  @media (min-width: $tablet) {
+    .services__container {
+      padding: 0 24px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    .services__container {
+      margin: 0;
+      padding-left: 34px;
+    }
+  }

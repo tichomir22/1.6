@@ -1,0 +1,142 @@
+.about-us {
+  font-family: 'TT Lakes';
+  font-size: 0.9rem;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #1b1c21;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+@media (min-width: $tablet) {
+  .about-us {
+    flex-direction: row;
+    flex: 1 1 50%;
+    justify-content: space-between;
+    align-content: center;
+    column-gap: 36px;
+  }
+}
+
+.about-us__container {
+  padding: 0 16px;
+  min-width: 289px;
+}
+
+@media (min-width: $tablet) {
+  .about-us__container {
+    padding: 0 0 0 20px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .about-us__container {
+    padding: 0 0 0 31px;
+  }
+}
+
+.about-us__text:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.about-us__elem {
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: $phone) {
+  .about-us__elem {
+    max-width: auto;
+    height: 70px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: $tablet) {
+  .about-us__elem {
+    height: 140px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .about-us__elem {
+    height: 155px;
+  }
+}
+
+.about-us__elem--full {
+  height: 250px;
+}
+
+@media (min-width: 450px) {
+  .about-us__elem--full {
+    height: 200px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .about-us__elem--full {
+    height: 220px;
+  }
+}
+
+@media (min-width: 900px) {
+  .about-us__elem--full {
+    height: 176px;
+  }
+}
+
+.about-us__logo {
+  display: block;
+  margin: auto;
+  width: 320px;
+  height: 176px;
+  object-fit: cover;
+}
+
+@media (min-width: $tablet) {
+  .about-us__logo {
+    border-radius: 5px;
+    width: 360px;
+    height: 208px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .about-us__logo {
+    width: 531.35px;
+    height: 307px;
+  }
+}
+
+.expand-btn {
+  font-family: 'TT Lakes';
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 500;
+  margin-bottom: 14px;
+  transition: all 1s ease;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 11px;
+    background-image: url(../img/check-down_icon.svg);
+    vertical-align: center;
+    margin: 0 13px 0 10px;
+    transition: all 0.2s ease;
+  }
+}
+
+.expand-btn--hide::before {
+  transform: rotate(180deg);
+}
+
+@media (min-width: $tablet) {
+  .about-us__logo-container {
+    padding-right: 25px;
+  }
+}

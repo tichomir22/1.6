@@ -1,0 +1,225 @@
+.aside-menu {
+    position: fixed;
+    display: block;
+    z-index: 10;
+    transform: translateX(-150%);
+    transition: all 0.3s ease;
+  }
+
+  @media (min-width: $desktop) {
+    .aside-menu {
+      position: fixed;
+      display: block;
+      transform: translateX(0);
+      z-index: 1;
+    }
+  }
+
+  .aside-menu--active {
+    position: fixed;
+    transform: translateX(0%);
+  }
+
+  .container-menu {
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    transition: 0.2s;
+    overflow-y: auto;
+  }
+
+  @media (min-width: 361px) {
+    .container-menu {
+      width: 320px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    .container-menu {
+      min-height: 764px;
+      overflow-y: hidden;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    .container-menu {
+      box-shadow: none;
+    }
+  }
+
+  .aside-menu__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 100%;
+  }
+
+  .aside-menu__header {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $tablet) {
+    .aside-menu__header {
+      margin-top: 24px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    .aside-menu__header {
+      margin-top: 35px;
+    }
+  }
+
+  .aside-menu__close {
+    display: flex;
+    column-gap: 17px;
+    flex: 1 0 auto;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    .aside-btn__close {
+      display: none;
+    }
+  }
+
+  .aside-menu__main {
+    flex: 1 1 33.333333%;
+  }
+
+  .aside-menu__nav {
+    flex-grow: 1;
+  }
+
+  .aside-menu__nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1 1 12.5%;
+    height: 450px;
+  }
+
+  .aside-menu__nav-item {
+    transition: all 1s ease;
+
+    &::before {
+      content: "";
+      background: url("../img/title-icon.svg") no-repeat;
+      position: absolute;
+      width: 4px;
+      height: 40px;
+      left: -16px;
+      top: -10px;
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+
+  .aside-menu__nav-item--active {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: "";
+      background: url("../img/title-icon.svg") no-repeat;
+      position: absolute;
+      width: 4px;
+      height: 40px;
+      left: -16px;
+      top: 0px;
+      transform: scale(1);
+      opacity: 1;
+      transition: all 0.4s ease;
+    }
+
+    .aside-menu__nav-link {
+      transition: all 1s ease;
+      opacity: 0.6;
+    }
+  }
+
+  .aside-menu__nav-link {
+    display: block;
+    color: #1b1c21;
+    font-weight: 500;
+    transition: all 0.5s ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .aside-menu__footer {
+    display: flex;
+    row-gap: 40px;
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+
+  .aside-menu__footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .aside-menu__footer-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 196px;
+    row-gap: 16px;
+  }
+
+  .aside-menu__footer-btn {
+    display: flex;
+    column-gap: 16px;
+  }
+
+  .aside-menu__footer-mail {
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    color: #1b1c21;
+  }
+
+  .aside-menu__footer-tel {
+    font-family: 'TT Lakes';
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #1b1c21;
+    letter-spacing: -0.6px;
+  }
+  .lang {
+    display: flex;
+    column-gap: 7px;
+  }
+  
+  .lang__link {
+    text-transform: uppercase;
+    font-family: 'TT Lakes';
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    color: #1b1c21;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      transform: scale(0.98);
+      opacity: 0.6;
+    }
+  }
+  
+  .lang__link--active {
+    transform: scale(0.98);
+    opacity: 0.6;
+  }
+  

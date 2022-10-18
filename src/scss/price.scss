@@ -1,0 +1,102 @@
+.price {
+    display: none;
+  }
+
+  @media (min-width: $tablet) {
+    .price {
+      display: block;
+    }
+  }
+
+  .price__header {
+    width: 95%;
+    padding: 0 16px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    height: 65px;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 16px;
+    color: #7e7e82;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+    font-weight: 400;
+  }
+
+  .price__container {
+    width: 95%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1b1c21;
+    margin-bottom: 30px;
+  }
+
+  .price__item {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    height: 65px;
+    align-items: center;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #eaeaea;
+    }
+  }
+
+  .price__btn {
+    width: 119px;
+    height: 32px;
+    margin-left: auto;
+    background-color: #ff3e79;
+    border-radius: 16px;
+    color: #fff;
+    font-weight: 500;
+  }
+  .price-footer__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 0 19px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $tablet) {
+    .price-footer__container {
+      padding: 0;
+      width: 95%;
+      margin: 0 auto 50px;
+    }
+  }
+
+  .price-footer__text {
+    display: inline-block;
+    max-width: 426px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  .price-footer__link {
+    display: inline;
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+
+    &::after {
+      margin-left: 5px;
+      display: inline-block;
+      content: "";
+      background: url(../img/check-mark.svg);
+      height: 10px;
+      width: 6px;
+      vertical-align: middle;
+    }
+  }
